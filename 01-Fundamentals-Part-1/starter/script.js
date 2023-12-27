@@ -63,7 +63,7 @@ job = 'teacher'
 lastName = 'Schmedtmann';
 console.log(lastName); */
 
-// Math Operators
+/* // Math Operators
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2019;
@@ -89,3 +89,37 @@ console.log(x);
 // Comparison Operators
 console.log(ageJonas > ageSarah);
 console.log(ageSarah >= 18)
+
+const isFullAge = ageSarah >= 18
+
+console.log(now - 1991 > now - 2018); */
+
+/* const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+
+console.log(now - 1991 > now - 2018);
+
+console.log(25 - 10 - 5);
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x = 10 since y is 10
+console.log(x, y);
+
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge); */
+
+// Coding Challenge 1 ------------------------------------------------------------
+const massMark = 65;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark, BMIJohn);
+
+const markHigherBMI = BMIMark > BMIJohn;
+
+console.log(markHigherBMI);
