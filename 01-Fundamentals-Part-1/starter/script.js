@@ -12,7 +12,7 @@ console.log(firstName);
 console.log(firstName);
 
 
-// Variable Name Conventions 
+// Variable Name Conventions
 let jonas_matilda = "JM";
 let $funtion = 27;
 
@@ -110,7 +110,7 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge); */
 
 // Coding Challenge 1 ------------------------------------------------------------
-const massMark = 65;
+/* const massMark = 65;
 const heightMark = 1.69;
 const massJohn = 92;
 const heightJohn = 1.95;
@@ -122,4 +122,29 @@ console.log(BMIMark, BMIJohn);
 
 const markHigherBMI = BMIMark > BMIJohn;
 
-console.log(markHigherBMI);
+console.log(markHigherBMI); */
+
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
+
+// Template Literals, new ES6 Feature
+const jonasNew = `Ì'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jonasNew)
+
+console.log(`Just a regular string...`)
+
+//old way
+console.log('String with \n\
+multiple \n\
+line');
+
+//new and easier way, just use returen
+console.log(`String
+with
+mulitple
+lines`);
