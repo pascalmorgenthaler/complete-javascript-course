@@ -36,3 +36,43 @@
 
 // const percentageOfWorld3 = population => (population / 7900) * 100;
 // console.log(percentageOfWorld3(5000));
+
+
+// // Assignemnet Functions calling Function Jonas Solution
+// const describePopulation = function (country, population) {
+//     const percentage = percentageOfWorld1(population);
+//     const description = `${country} has ${population} million people, which is about ${percentage}% of the world.}`;
+//     console.log(description);
+// }
+
+// describePopulation('Switzerland', '8');
+// describePopulation('Italy', '60');
+// describePopulation('China', '1441');
+
+
+// Assignemnet Functions calling Function Pascal Solution
+// function describePopulation(country, population) {
+//     return `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.}`;
+// }
+
+// console.log(describePopulation('Switzerland', '8'));
+// console.log(describePopulation('Italy', '60'));
+// console.log(describePopulation('China', '1441'));
+
+// const populations = [8, 60, 10, 1441];
+// console.log(populations.lenght === 4);
+
+// const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[populations.length - 1])];
+// console.log(percentages);
+
+// const neighbours = ['Italy', 'France', 'Germany', 'Austria', 'Lichtenstein'];
+
+// neighbours.push('Utopia');
+// neighbours.pop('Utopia');
+
+// if (!neighbours.includes('Germany')) {
+//     console.log(`Your country is not in Central Europe.`)
+// }
+
+// neighbours[neighbours.indexOf('Germany')] = 'Republic of Germany';
+// console.log(neighbours);
