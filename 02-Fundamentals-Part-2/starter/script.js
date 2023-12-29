@@ -227,13 +227,243 @@
 //   ['Michael', 'Peter', 'Steven']
 // ];
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-};
-console.log(jonas);
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
+// console.log(jonas);
 
-console.log(jonas.lastName);
+// console.log(jonas.lastName); // lastName is an operator that gets the lastName from the object jonas
+// console.log(jonas['lastName']); // identical
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, friends');
+
+// if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('Wrong request. Choose between firstName, lastName, age, job, friends')
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman';
+
+// console.log(jonas);
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
+
+//     // calcAge: function (birthYear) {
+//     //     return 2037 - birthYear;
+//     // } // pretty similar to normal functions but syntax a little different with syntax in the beginning
+
+//     // calcAge: function () {
+//     //     return 2037 - this.birthYear;
+//     // }
+
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear
+//         return this.age;
+//     },
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense === true ? 'a' : 'no'} driver's license.`;
+//     }
+// };
+
+// console.log(jonas.calcAge());
+// // console.log(jonas['calcAge'](1991));
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// console.log(jonas.getSummary());
+
+// Coding Challenge 6 ----------------------------------------------------------------
+
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// }
+
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// }
+
+// mark.calcBMI();
+// john.calcBMI();
+// console.log(mark.bmi, john.bmi);
+
+// console.log(
+//     `${john.calcBMI() > mark.calcBMI() ? john.fullName : mark.fullName}'s BMI (${john.calcBMI() > mark.calcBMI() ? john.bmi : mark.bmi}) is higher than ${john.calcBMI() < mark.calcBMI() ? 'John' : 'Mark'}'s (${john.calcBMI() < mark.calcBMI() ? john.bmi : mark.bmi}). So ${john.calcBMI() > mark.calcBMI() ? john.fullName : mark.fullName} wins.`
+// );
+
+
+// console.log('Lifting weights repetition 1 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 2 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 3 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 4 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 5 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 6 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 7 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 8 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 9 🏋🏻‍♀️');
+// console.log('Lifting weights repetition 10 🏋🏻‍♀️');
+
+// this up there is bad
+
+// // rep <= 10 -> this is the condition, the loop keeps running while this condition is true
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋🏻‍♀️`);
+// }
+
+
+
+// const jonas = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ];
+
+// const types = []; // empty array
+
+// // we want the loop to run as long as there are items in the array, so we can compute the logic in the for loop that if we add new items, it will also loop through them. we do that with jonas.length 
+// for (let i = 0; i < jonas.length; i++) {
+//     // Reading from jonas Array
+//     console.log(jonas[i], typeof jonas[i]);
+
+//     // Filling types Array
+//     // types[i] = typeof jonas[i]; // first way
+//     types.push(typeof jonas[i]); // second way, cleaner
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
+
+// console.log(ages);
+
+// // continue and break statements
+// console.log('--- ONLY STRINGS ---')
+// for (let i = 0; i < jonas.length; i++) {
+//     if (typeof jonas[i] !== 'string') continue; // only strings will be printed
+
+//     console.log(jonas[i], typeof jonas[i]);
+// }
+
+// console.log('--- Break with Number ---')
+// for (let i = 0; i < jonas.length; i++) {
+//     if (typeof jonas[i] === 'number') break; // only strings will be printed
+
+//     console.log(jonas[i], typeof jonas[i]);
+// }
+
+// const jonas = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ];
+
+// // 0, 1, ..., 4
+// // 4, 3, 2, 1, 0
+
+// // looping backwards, just start with the length of the array - 1
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//     console.log(i, jonas[i]);
+// }
+
+// // loop inside of a loop // <= 3 is the same as < 4 
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//     console.log(`------------ Starting exercise ${exercise}`);
+
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♂️`)
+//     }
+// }
+
+// normal loop
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 🏋🏻‍♀️`);
+// }
+
+// // while loop
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Lifting weights repetition ${rep} 🏋🏻‍♀️`);
+//     rep++;
+// }
+
+// lets roll a dice until it gets 6, so we don't have a counter, we just want it to be running until it reaches 6 and then stop
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log('Loop is about to end...');
+// }
+
+// Coding Challenge 8 ----------------------------------------------------------------
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function (billValue) {
+    if (billValue >= 50 && billValue <= 300) {
+        return billValue * 0.15;
+    } else {
+        return billValue * 0.2;
+    }
+}
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+
+const calcAverage = function (arr) {
+    const sum = 
+}

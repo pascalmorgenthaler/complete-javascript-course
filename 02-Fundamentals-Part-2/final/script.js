@@ -536,7 +536,7 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
 }
-*/
+* /
 
 ///////////////////////////////////////
 // Coding Challenge #4

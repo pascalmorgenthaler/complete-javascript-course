@@ -76,3 +76,95 @@
 
 // neighbours[neighbours.indexOf('Germany')] = 'Republic of Germany';
 // console.log(neighbours);
+
+
+// const myCountry = {
+//     country: 'Switzerland',
+//     capital: 'Bern',
+//     language: 'Swiss German',
+//     population: 8,
+//     neighbours: ['Italy', 'France', 'Germany', 'Lichtenstein', 'Austria'],
+//     describe: function () {
+//         return console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and the capital called ${this.capital}`)
+//     },
+//     checkIsland: function () {
+//         this.isIsland = this.neighbours.length >= 1 ? false : true;
+//         return console.log(this.isIsland);
+//     }
+// };
+
+// myCountry.describe();
+// myCountry.checkIsland();
+
+// console.log(myCountry);
+
+// console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and the capital called ${myCountry.capital}`);
+
+// myCountry.population += 2;
+
+// console.log(myCountry);
+
+// myCountry['population'] -= 2;
+
+// console.log(myCountry);
+
+
+// for (let voter = 1; voter <= 50; voter++) {
+//     console.log(`Voter number ${voter} is currently voting 📄`);
+// }
+
+// const populations = [8, 60, 10, 1441];
+// const percentages2 = [];
+
+// function percentageOfWorld1(population) {
+//     return (population / 7900) * 100;
+// }
+
+// for (let i = 0; i < populations.length; i++) {
+//     // percentages2.push((populations[i] / 7900) * 100); // my way
+//     const perc = percentageOfWorld1(populations[i]); // jonas way
+//     percentages2.push(perc)
+// }
+
+// console.log(percentages2);
+
+// const listOfNeighbours = [
+//     ['Canada', 'Mexico'],
+//     ['Spain'],
+//     ['Norway', 'Sweden', 'Russia']
+// ];
+
+// console.log(listOfNeighbours);
+
+// for (let countryArray = 0; countryArray < listOfNeighbours.length; countryArray++) {
+
+//     for (let country = 0; country < listOfNeighbours[countryArray].length; country++) {
+//         console.log(`Neighbour: ${listOfNeighbours[countryArray][country]}`);
+//     }
+
+
+// }
+
+
+// const populations = [8, 60, 10, 1441];
+// const percentages3 = [];
+
+// function percentageOfWorld1(population) {
+//     return (population / 7900) * 100;
+// }
+
+// let i = 0;
+
+// while (i < populations.length) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentages3.push(perc);
+//     i++;
+// }
+
+// // for (let i = 0; i < populations.length; i++) {
+// //     // percentages2.push((populations[i] / 7900) * 100); // my way
+// //     const perc = percentageOfWorld1(populations[i]); // jonas way
+// //     percentages2.push(perc)
+// // }
+
+// console.log(percentages3);
