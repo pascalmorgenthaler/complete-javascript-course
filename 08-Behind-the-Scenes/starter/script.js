@@ -39,7 +39,7 @@ calcAge(1991);
 // console.log(age);   gets error
 // printAge();          gets error */
 
-
+/* 
 // Variables
 console.log(me);
 // console.log(job);
@@ -71,10 +71,49 @@ var addArrow = (a, b) => a + b;
 // Example
 
 // !numPrducts means basicalla, if there are no products, so if products = 0 and 0 is a falsy value
+console.log(numProducts);
 if (!numProducts) deleteShoppingCart();
 
 var numProducts = 10;
 
+console.log(numProducts);
+
 function deleteShoppingCart() {
     console.log('All products deleted!');
 };
+
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z); */
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+    console.log(2037 - birthYear);
+    console.log(this);
+};
+
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+    console.log(2037 - birthYear);
+    console.log(this);
+}
+    
+calcAgeArrow(1980);
+
+const jonas = {
+    year: 1991,
+    calcAge: function() {
+        console.log(this);
+        console.log(2037 - this.year);
+    }
+}
+jonas.calcAge();
+
+
