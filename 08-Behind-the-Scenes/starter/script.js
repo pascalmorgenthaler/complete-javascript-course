@@ -91,7 +91,7 @@ console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z); */
 
-console.log(this);
+/* console.log(this);
 
 const calcAge = function (birthYear) {
     console.log(2037 - birthYear);
@@ -127,4 +127,114 @@ matilda.calcAge(); // the this keyword inside the method which is written inside
 
 
 const f = jonas.calcAge; // a function is just a value, thats why that is possible
-f(); // this ia now a regular function call, there is no owner of the function, therefore this keyword is undefined
+f(); // this ia now a regular function call, there is no owner of the function, therefore this keyword is undefined */
+
+/* var firstName = 'Matilda'
+
+
+const jonas = {
+    firstName: 'Jonas',
+    year: 1991,
+    calcAge: function() {
+        // console.log(this);
+        console.log(2037 - this.year);
+
+        // Solution 1
+        // const self = this; // here this is still the jonas object self or that
+        // const isMillenial = function () {
+        //     console.log(self);
+        //     console.log(self.year >= 1981 && self.year <= 1996);
+        // }
+
+        // Solution 2
+        const isMillenial = () => {
+            console.log(this);
+            console.log(this.year >= 1981 && this.year <= 1996);
+        }
+
+        isMillenial();
+    },
+
+    greet: () => {
+    console.log(this); // window
+    console.log(`Hey ${this.firstName}`) // gets undefined since firstName is not defined in the window object BUT, var creates properties on the window object, therefore now jonas.greet(); calls Hey Matilda
+    },
+};
+
+jonas.greet(); 
+jonas.calcAge();
+
+// Arguments Keyword
+function addDecl(a, b) {
+    console.log(arguments);
+    return a + b;
+};
+addDecl(2, 5);
+
+const addExpr = function(a, b) {
+    console.log(arguments);
+    return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 6, 12);
+
+var addArrow = (a, b) => {
+    console.log(arguments);
+    a + b;
+};
+addArrow(2, 5); */
+
+/* let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+    name: 'Jonas',
+    age: 30,
+};
+
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+console.log('Me:', me); */
+
+
+// Primitive Types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName);
+console.log(oldLastName);
+
+// Reference Types
+const jessica = {
+    fistName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+
+// marriedJessica = {} does not work, since it is a const
+
+// Copying Objects
+const jessica2 = {
+    fistName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+    family: ['Alice', 'Bob'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
