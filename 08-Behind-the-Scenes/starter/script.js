@@ -117,3 +117,14 @@ const jonas = {
 jonas.calcAge();
 
 
+const matilda = {
+    year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge; // we borrowed the function now from jonas
+
+matilda.calcAge(); // the this keyword inside the method which is written inside the jonas object now point to the matilda object
+
+
+const f = jonas.calcAge; // a function is just a value, thats why that is possible
+f(); // this ia now a regular function call, there is no owner of the function, therefore this keyword is undefined
