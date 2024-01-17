@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 // Data needed for a later exercise
 const flights =
@@ -17,7 +17,7 @@ const restaurant = {
   orderDelivery: function({starterIndex = 1, mainIndex = 0, time = '20:00', address}) { // we immediatly destructure, the names have to be equal to the names in the object that we pass into, cool is that the order does not matter
     console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}.`);
   },
-  orderPasta: function({ing1, ing2, ing3}) {
+  orderPasta: function(ing1, ing2, ing3) {
       console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
   openingHours: {
@@ -66,8 +66,28 @@ console.log(letters);
 console.log(...str);
 // console.log(`${...str} Schmedtmann`); // does not work since this is not a place that expects values separated by commas
 
-const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'), prompt('Ingredient 2?'), prompt('Ingredient 3?')];
-console.log(ingredients);
+// const ingredients = [
+//   prompt('Let\'s make pasta! Ingredient 1?'), 
+//   prompt('Ingredient 2?'), 
+//   prompt('Ingredient 3?'),
+// ];
+
+// // old way
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// // new way
+// restaurant.orderPasta(...ingredients);
+
+
+// Objects
+// make a new object with using another object
+const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Guiseppe'};
+console.log(newRestaurant);
+
+// make a copy
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name, restaurant.name); */
+
 
 /* console.log(restaurant.orderDelivery({
   time: '22:30',

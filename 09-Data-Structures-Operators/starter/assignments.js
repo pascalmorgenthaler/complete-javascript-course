@@ -1,4 +1,4 @@
-/* const books = [
+const books = [
     {
       title: 'Algorithms',
       author: ['Robert Sedgewick', 'Kevin Wayne'],
@@ -12,6 +12,7 @@
       language: 'English',
       programmingLanguage: 'Java',
       onlineContent: true,
+      year: 2000,
       thirdParty: {
         goodreads: {
           rating: 4.41,
@@ -182,6 +183,8 @@
     }
   ];
 
+
+  // destructuring arrays
   const [firstBook, secondBook] = books;
   const[ , , thirdBook] = books;
 
@@ -192,4 +195,37 @@
 
   const ratingStars = [63405, 1808];
 
-  const [fiveStarRatings, oneStarRatings, threeStarRatings=0] = ratingStars; */
+  const [fiveStarRatings, oneStarRatings, threeStarRatings=0] = ratingStars;
+
+  // destructuring objects
+  const [book1] = books;
+  const {title, ISBN, author} = book1;
+  console.log(title, ISBN, author);
+
+  const {keywords: tags} = book1;
+  console.log(tags);
+
+  const {language, programmingLanguage = 'unknown'} = books[6];
+
+  let bookTitle = 'unknown';
+  let bookAuthor = 'unknown';
+  ({title: bookTitle, author: bookAuthor} = books[0]);
+
+  const { thirdParty: {goodreads: { rating: bookRating }}}  = books[0];
+  console.log(bookRating);
+
+  const printBookInfo = function ({title, author, year = 'unknown year'}) {
+    console.log(`${title} by ${author}, ${year}`);
+  };
+
+  printBookInfo(books[0]);
+
+  // spread operators
+  const bookAuthors = [...books[0].author, ...books[1].author ]
+  console.log(bookAuthors);
+
+  const spellWord = function(str) {
+    console.log(...str);
+  };
+
+  spellWord('Pascal');
