@@ -1,4 +1,4 @@
-const books = [
+/* const books = [
     {
       title: 'Algorithms',
       author: ['Robert Sedgewick', 'Kevin Wayne'],
@@ -229,3 +229,42 @@ const books = [
   };
 
   spellWord('Pascal');
+
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
+
+const { publisher: bookPublisher, ...restOfTheBook} = books[1];
+console.log(bookPublisher, restOfTheBook);
+
+const printBookAuthorsCount = function(title, ...authors) {
+   console.log(`The book ${title} has ${authors.length} authors.`);
+};
+printBookAuthorsCount(books[0].title, ...books[0].author);
+console.log(books[0].author);
+
+const hasExamplesInJava = function (book) {
+  return book.programmingLanguage === 'Java' || 'no data available';
+};
+
+console.log(hasExamplesInJava(books[3]));
+
+
+for (let i = 0; i < books.length; i++) {
+   books[i].onlineContent && console.log(`${books[i].title}" provides online content`);
+};
+
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ?? console.log(`${books[i].title}" provides no data about its online content`);
+};
+
+for (let i = 0; i < books.length; i++) {
+  console.log(books[i].edition ||= 1);
+};
+
+for (let i = 0; i < books.length; i++) {
+  console.log(books[i].thirdParty.goodreads.rating <= 4.2 ? false : true);
+};
+
+for (let i = 0; i < books.length; i++) {
+  console.log(books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.1));
+}; */
