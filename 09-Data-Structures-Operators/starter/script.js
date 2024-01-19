@@ -51,6 +51,35 @@ const restaurant = {
   },
 };
 
+
+// Property Names / Keys
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days:`;
+
+for (const day of properties) {
+  openStr += ` ${day},`
+};
+
+console.log(openStr);
+
+// Property Values
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire object
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+// destructure immediatly in the variable definition
+for (const [key, {open, close}] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}!`);
+}
+
+
+/*
+
 // This can get messy really fast when we have deeply nested properties to check for
 if (restaurant.openingHours && restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 
@@ -80,7 +109,7 @@ const users = [
 console.log(users[0]?.name ?? 'users array empty');
 console.log(users[1]?.name ?? 'users array empty');
 
-/*
+
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; 
 
 for (const item of menu) console.log(item);

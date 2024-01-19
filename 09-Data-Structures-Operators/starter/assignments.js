@@ -267,4 +267,63 @@ for (let i = 0; i < books.length; i++) {
 
 for (let i = 0; i < books.length; i++) {
   console.log(books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.1));
-}; */
+};
+
+let pageSum = 0;
+for (const item of books) {
+    pageSum += item.pages;
+};
+
+console.log(pageSum);
+
+const allAuthors = [];
+
+for (const author of books) {
+  if (typeof(author.author) === 'string') {
+    allAuthors.push(author.author)
+  } else {
+    const authorArr = [...author.author];
+    allAuthors.push(...authorArr);
+  }
+
+}
+
+console.log(allAuthors);
+
+for (const [index, author] of allAuthors.entries()) {
+  // console.log(author, index);
+  console.log(`${index +1}: ${author}`);
+}
+
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+  // ...
+};
+
+console.log(newBook);
+
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  pages,
+  // ...
+}
+
+console.log(newBook2);
+
+const getFirstKeyword = function(obj) {
+  console.log(obj?.keywords?.[0]);  
+}
+
+getFirstKeyword(books[4]) */
